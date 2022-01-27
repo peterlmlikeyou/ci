@@ -18,7 +18,7 @@
 
 ## Step3 - 安装 Jenkins
 
-在 docker 中安装　Jenkins:　sudo docker run -p 8080:8080 -v /home/ci/jenkins:/var/jenkins_home jenkinsci/blueocean
+在 docker 中安装　Jenkins:　sudo docker run -p 8080:8080 jenkinsci/blueocean
 
 参考:
 
@@ -27,7 +27,9 @@
 
 ## Step4 - 安装　Jenkins 插件
 
+安装下述插件：
 
+ - 
 
 # 安装 Jenkins Build Server
 
