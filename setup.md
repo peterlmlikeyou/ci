@@ -42,7 +42,15 @@
 
 步骤：
 
- - 
+ - Manage Jenkins -> Global Tool Configuration -> 增加 Allure Commandline
+ - Manage Jenkins -> Manage Nodes and Clouds -> Add node 增加一个节点
+
+节点配置方法：
+
+  - 远程工作目录 - 配置远程机器上的工作目录
+  - 标签
+  - 启动方式 - 选择 SSH
+  - 节点属性 - 选择工具位置
 
 # 安装 Jenkins Build Server
 
