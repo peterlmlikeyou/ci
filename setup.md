@@ -14,25 +14,26 @@
 1. sudo apt-get update
 3. sudo apt install docker.io
 
+参考:　https://docs.docker.com/engine/install/ubuntu/
+
 ## Step3 - 安装 Jenkins
 
-1. sudo apt-get update
-2. sudo apt install curl
-3. sudo apt install docker.io
-4. 
-5. curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
-  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
-echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
-  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
-  /etc/apt/sources.list.d/jenkins.list > /dev/null
-4. sudo apt-get update
-5. sudo apt-get install jenkins
-6. 
-参考官网安装 Jenkins: https://www.jenkins.io/doc/book/installing/linux/
+在 docker 中安装　Jenkins:　sudo docker run -p 8080:8080 -v /home/ci/jenkins:/var/jenkins_home jenkinsci/blueocean
 
-## Step3 - 
+参考:
+
+ - https://www.jenkins.io/doc/book/installing/docker/
+ - https://hub.docker.com/r/jenkinsci/blueocean
+
+## Step4 - 安装　Jenkins 插件
+
+
+
 # 安装 Jenkins Build Server
 
 # 安装 Test Server
 
-# 安装 
+# 参考资料
+
+　-　https://docs.docker.com/engine/install/ubuntu/
+　-　
