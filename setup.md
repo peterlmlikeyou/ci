@@ -29,6 +29,13 @@
 
 安装下述插件：
 
+ - allure
+ - Publish Over CIFS
+ - pipeline 相关插件
+ - metersphere，下载安装：https://github.com/metersphere/jenkins-plugin/releases/tag/v1.17.0
+ - SSH
+ - scp
+ - jira
  - 
 
 # 安装 Jenkins Build Server
