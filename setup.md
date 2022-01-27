@@ -60,3 +60,7 @@
 
 　-　https://docs.docker.com/engine/install/ubuntu/
 　-　
+
+# CI 优化
+
+ - 测试计划 <-> 测试用例 <-> 生成流水线 <-> 测试用例分发 <-> 测试 <-> 测试结果生成
