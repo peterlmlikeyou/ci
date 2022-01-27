@@ -38,6 +38,12 @@
  - jira
  - 
 
+## Step5 - 如果为主控节点，则配置从节点
+
+步骤：
+
+ - 
+
 # 安装 Jenkins Build Server
 
 # 安装 Test Server
