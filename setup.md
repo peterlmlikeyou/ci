@@ -71,6 +71,13 @@ Master 连上 Slave 之后会使用 Java，因此需要安装 JDK：
 
  - sudo apt install openjdk-17-jdk
 
+## pytest
+
+pip install pytest
+
+## allure-pytest
+
+pip install allure-pytest
 
 # 安装 Jenkins Build Server
 
