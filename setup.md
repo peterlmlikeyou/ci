@@ -52,6 +52,14 @@
   - 启动方式 - 选择 SSH
   - 节点属性 - 选择工具位置
 
+# 安装 Jenkins Slave
+
+因为 Jenkins Master 通过 SSH 登录 Slave 节点，因此需要确保 Slave 节点的 SSH 服务开启，开启法：
+
+ - sudo apt-get install openssh-server
+ - sudo /etc/init.d/ssh start
+ - sudo service ssh status 查看开启状态
+
 # 安装 Jenkins Build Server
 
 # 安装 Test Server
