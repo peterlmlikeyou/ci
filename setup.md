@@ -54,11 +54,23 @@
 
 # 安装 Jenkins Slave
 
+## 启动 SSH 服务
+
 因为 Jenkins Master 通过 SSH 登录 Slave 节点，因此需要确保 Slave 节点的 SSH 服务开启，开启法：
 
  - sudo apt-get install openssh-server
  - sudo /etc/init.d/ssh start
  - sudo service ssh status 查看开启状态
+
+如果 SSH Server 未启动， 则 Master 连接 Slave 时会报 "SSH Connection Refused" or "SSH Connection Closed" 错误。
+
+
+## 安装 Java
+
+Master 连上 Slave 之后会使用 Java，因此需要安装 JDK：
+
+ - sudo apt install openjdk-17-jdk
+
 
 # 安装 Jenkins Build Server
 
