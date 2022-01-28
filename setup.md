@@ -74,6 +74,14 @@ Master 连上 Slave 之后会使用 Java，因此需要安装 JDK：
 
 # 安装 Jenkins Build Server
 
+## 安装工具链
+
+可通过 scp 在 linux 机器之间传输
+
+## 找 Steven 为 itester 添加 ssh key
+
+## 安装 make
+
 # 安装 Test Server
 
 # 参考资料
