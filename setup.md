@@ -82,6 +82,13 @@ Master 连上 Slave 之后会使用 Java，因此需要安装 JDK：
 
 ## 安装 make
 
+## install dependency
+
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install build-essential cmake python3 python3-pip doxygen ninja-build libc6:i386 libstdc++6:i386 libncurses5-dev lib32z1 -y
+
+
 # 安装 Test Server
 
 # 参考资料
