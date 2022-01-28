@@ -101,6 +101,12 @@ Master 连上 Slave 之后会使用 Java，因此需要安装 JDK：
 
 # 安装 Test Server
 
+## appnium
+
+## google driverchrome
+
+## 
+
 # 参考资料
 
 　-　https://docs.docker.com/engine/install/ubuntu/
