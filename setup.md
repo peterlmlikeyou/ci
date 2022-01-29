@@ -83,6 +83,8 @@ Master 连上 Slave 之后会使用 Java，因此需要安装 JDK：
 
  - sudo apt install python-pytest
 
+**注意，生成 allure 报告流水线语法一定不能错，不然无法生成报告，发现无法生成报告时可考虑找一个能生成报告的写法 copy 过来**
+
 # 安装 Jenkins Build Server
 
 ## 安装工具链
