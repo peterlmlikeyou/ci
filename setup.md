@@ -136,6 +136,7 @@ admin/********
 
 # Jekins Pipeline
 
+CI
 .. code::
 
 pipeline {
@@ -144,14 +145,15 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'echo "Clean workspace"'
+                sh 'echo "workspace=$WORKSPACE"'
+                sh 'echo "clean workspace"'
                 sh 'rm -rf *'
                 sh 'echo "clone auto test script"'
                 sh 'git clone "ssh://itester@192.168.0.46:29418/wifi/auto_test"'
                 sh 'echo "mpb"'
-                //sh '${WORKSPACE}/auto_test/tools/ci/jobs/jobs_mpb.sh mpb freertos 3.0 ${gerrit_numbers}'
+                sh '${WORKSPACE}/auto_test/tools/ci/jobs/jobs_mpb.sh mpb freertos 3.0 ${gerrit_numbers}'
                 sh 'echo "build"'
-                //sh '${WORKSPACE}/auto_test/tools/ci/jobs/jobs_build.sh'
+                sh '${WORKSPACE}/auto_test/tools/ci/jobs/jobs_build.sh'
             }
         }
 
@@ -168,20 +170,12 @@ pipeline {
                 sh '${WORKSPACE}/auto_test/tools/ci/jobs/jobs_verify.sh'
             }
         }
-        
-        stage('reports') {
-            steps {
-                script {
-                    allure([
-                        includeProperties: false,
-                        jdk: '',
-                        properties: [],
-                        reportBuildPolicy: 'ALWAYS',
-                        results: [[path: 'allure-results']]
-                    ])
-                }
+    }
+    post('Results') {
+        always {
+            script {
+                allure includeProperties: false, jdk: '', report: 'allure_report', results: [[path: 'allure_results']]
             }
         }
-
     }
 }
