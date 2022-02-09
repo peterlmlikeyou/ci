@@ -20,6 +20,8 @@
 
 在 docker 中安装　Jenkins:　sudo docker run -p 8080:8080 jenkinsci/blueocean
 
+**sudo docker run -u 0 -p 8080:8080 -v $HOME/jenkins:/var/jenkins_home jenkinsci/blueocean**
+
 参考:
 
  - https://www.jenkins.io/doc/book/installing/docker/
