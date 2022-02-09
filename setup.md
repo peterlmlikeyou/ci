@@ -131,3 +131,55 @@ admin/********
  - 测试管理
  - 测试文档
  - 测试框架重构
+
+# Jekins Pipeline
+
+.. code::
+
+pipeline {
+    agent { label 'smoke'} 
+
+    stages {
+        stage('Build') { 
+            steps {
+                sh 'echo "Clean workspace"'
+                sh 'rm -rf *'
+                sh 'echo "clone auto test script"'
+                sh 'git clone "ssh://itester@192.168.0.46:29418/wifi/auto_test"'
+                sh 'echo "mpb"'
+                //sh '${WORKSPACE}/auto_test/tools/ci/jobs/jobs_mpb.sh mpb freertos 3.0 ${gerrit_numbers}'
+                sh 'echo "build"'
+                //sh '${WORKSPACE}/auto_test/tools/ci/jobs/jobs_build.sh'
+            }
+        }
+
+        stage('Flash') { 
+            steps {
+                sh 'echo "flash"'
+                //sh '${WORKSPACE}/auto_test/tools/ci/jobs/jobs_flash.sh'
+            }
+        }
+
+        stage('Verify') { 
+            steps {
+                sh 'echo "verify"'
+                sh '${WORKSPACE}/auto_test/tools/ci/jobs/jobs_verify.sh'
+            }
+        }
+        
+        stage('reports') {
+            steps {
+                script {
+                    allure([
+                        includeProperties: false,
+                        jdk: '',
+                        properties: [],
+                        reportBuildPolicy: 'ALWAYS',
+                        results: [[path: 'allure-results']]
+                    ])
+                }
+            }
+        }
+
+    }
+}
