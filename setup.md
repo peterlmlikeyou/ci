@@ -113,7 +113,7 @@ admin/********
 
 # 安装 Test Server
 
-## appnium
+## appium
 
 ## google driverchrome
 
