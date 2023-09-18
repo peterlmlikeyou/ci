@@ -1,1 +1,6 @@
 sudo docker run -ti --device=/dev/ttyUSB0 --device=/dev/ttyUSB1 --rm -v /home/mingliu/docker/armino:/data peterlikeyou/armino_psa_l2:v0.7 /bin/bash
+
+73c7bf397f2ad6bf4e7403a7b965dc5ce0645df039c2d69c814ffb403183fb18
+2af1f2236872981bdf2f17975fb3029fad171de61741a383ef2c621fd5f5cf62
+ca68e9b3e991433ca9a6a2d6a74fc9dd5ccf559a4ae179537bde2772e0393ccf
+
